@@ -178,8 +178,9 @@ class _topupState extends State<topup> {
                                       fontWeight: FontWeight.bold),
                                 ),
                                 validator: (value) {
-                                  if (value
-                                      .contains(RegExp(r'[1-9][0-9]{1,20}'))) {
+                                  if (value != null &&
+                                      value.contains(
+                                          RegExp(r'^[1-9][0-9]{1,20}$'))) {
                                     return null;
                                   }
                                   return "Input harus terdiri dari angka, tidak boleh berawal dengan 0, dan harus kurang dari 20 digit.";

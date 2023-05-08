@@ -265,17 +265,13 @@ class _forgotpwchangeState extends State<forgotpwchange> {
                               ),
 
                               validator: (value) {
-                                if (value == null || value.isEmpty) {
-                                  return "Password tidak boleh kosong";
-                                } else if ((value.length < 8) ||
-                                    (value.contains(RegExp(r'[A-Z]')) ==
-                                        false) ||
-                                    (value.contains(
-                                            RegExp(r'[1-9].*[1-9].*[1-9]')) ==
-                                        false)) {
-                                  return "Password belum memenuhi kriteria";
+                                if (value != null &&
+                                        value.contains(r'[0-9A-Za-z]{8,}') &&
+                                        value.contains(
+                                            RegExp(r'[0-9].*[0-9].*[0-9]'))) {
+                                            return null;
                                 }
-                                return null;
+                                return "Password minimal berupa 8 huruf dan angka dengan minimal 3 angka";
                               },
                             ),
                           ),

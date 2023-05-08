@@ -151,24 +151,12 @@ class _UserInfromationScreenState extends State<UserInfromationScreen> {
                                 ),
 
                                 validator: (value) {
-                                  if (value == null || value.isEmpty) {
-                                    return "Masukkan nama";
-                                  } else if ((value.length < 3)) {
-                                    return "Nama terlalu singkat";
-                                  } else if ((value
-                                          .contains(RegExp(r'[1-9]')) ==
-                                      true)) {
-                                    return "Nama tidak boleh menggunakan angka";
-                                  } else if ((value
-                                          .contains(RegExp(r'[^\w\s]')) ==
-                                      true)) {
-                                    return "Nama wajib huruf";
-                                  } else if ((value.contains(RegExp(r'\s')) ==
-                                      true)) {
-                                    return "Nama tidak boleh ada spasi";
+                                  if (value != null &&
+                                          value.contains(
+                                              RegExp(r'^[A-Za-z]{3,}$'))) {
+                                    return null;
                                   }
-
-                                  return null;
+                                  return "Nama harus berupa lebih dari 3 huruf alfabet dan tanpa spasi";
                                 },
                               ),
                             ),

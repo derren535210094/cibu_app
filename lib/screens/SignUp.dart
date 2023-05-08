@@ -316,16 +316,12 @@ class _SignUp extends State<SignUp> {
                         });
                       },
                       validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return "\t\t\t\t\t\tMasukkan No. Telepon";
-                        } else if ((value.length < 10) ||
-                            (value.length > 13) ||
-                            (value.contains(RegExp(r'[A-Z]')) == true) ||
-                            (value.contains(RegExp(r'[a-z]')) == true)) {
-                          return "Masukkan No. Telepon dengan benar";
+                        if (value != null &&
+                            value.contains(
+                                RegExp(r'[0-9]{10,13}'))) {
+                          return null;
                         }
-
-                        return null;
+                        return "Masukkan nomor telepon dengan benar";
                       },
                     ),
                   ),
@@ -347,10 +343,6 @@ class _SignUp extends State<SignUp> {
                       if (validatorKey.currentState!.validate())
                         {
                           sendPhoneNumber(),
-                        }
-                      else if ((value == null || value.isEmpty))
-                        {
-                          print("UnSuccessfull"),
                         }
                       else
                         {
