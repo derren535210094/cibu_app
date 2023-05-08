@@ -1,27 +1,27 @@
 class UserModel {
-   String name;
-   String email;
-   String createdAt;
-   String phoneNumber;
-   String uid;
-   String money;
-   String password;
-   String createdAtMonth;
-   String createdAtYear;
+  String name;
+  String email;
+  String createdAt;
+  String phoneNumber;
+  String uid;
+  String money;
+  String password;
+  String createdAtMonth;
+  String createdAtYear;
 
   UserModel({
-   required this.name,
-   required this.email,
-   required this.createdAt,
-   required this.phoneNumber,
-   required this.uid,
-   required this.money,
-   required this.password,
-   required this.createdAtMonth,
-   required this.createdAtYear,
+    required this.name,
+    required this.email,
+    required this.createdAt,
+    required this.phoneNumber,
+    required this.uid,
+    required this.money,
+    required this.password,
+    required this.createdAtMonth,
+    required this.createdAtYear,
   });
 
-  factory UserModel.fromMap(Map<String, dynamic> map){
+  factory UserModel.fromMap(Map<String, dynamic> map) {
     return UserModel(
       name: map['name'] ?? '',
       email: map['email'] ?? '',
@@ -32,11 +32,11 @@ class UserModel {
       password: map['password'] ?? '',
       createdAtMonth: map['createdAt (Month Number)'] ?? '',
       createdAtYear: map['createdAt (Year Number)'] ?? '',
-      );
+    );
   }
 
-  Map<String, dynamic> toMap(){
-    return{
+  Map<String, dynamic> toMap() {
+    return {
       "name": name,
       "email": email,
       "uid": uid,
@@ -48,6 +48,4 @@ class UserModel {
       "createdAt (Year Number)": createdAtYear,
     };
   }
-
-
 }

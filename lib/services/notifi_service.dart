@@ -6,7 +6,8 @@ class NotificationService {
 
   Future<void> initNotification() async {
     AndroidInitializationSettings initializationSettingsAndroid =
-        const AndroidInitializationSettings('/Users/derrenfusta/Documents/Flutter Project/cibu_app/lib/assets/logo.png');
+        const AndroidInitializationSettings(
+            '/Users/derrenfusta/Documents/Flutter Project/cibu_app/lib/assets/logo.png');
 
     var initializationSettingsIOS = DarwinInitializationSettings(
         requestAlertPermission: true,
