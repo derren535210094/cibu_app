@@ -6,14 +6,14 @@ import 'dart:async';
 
 import '../provider/auth_provider.dart';
 
-class Settings extends StatefulWidget {
-  const Settings({super.key});
+class settings extends StatefulWidget {
+  const settings({super.key});
 
   @override
-  State<Settings> createState() => _SettingsState();
+  State<settings> createState() => _settingsState();
 }
 
-class _SettingsState extends State<Settings> {
+class _settingsState extends State<settings> {
   @override
   Widget build(BuildContext context) {
     final ap = Provider.of<AuthProvider>(context, listen: false);

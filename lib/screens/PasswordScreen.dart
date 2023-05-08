@@ -1,8 +1,8 @@
 import 'package:cibu_app/provider/auth_provider.dart';
 import 'package:cibu_app/screens/FirstScreen.dart';
 import 'package:cibu_app/screens/HomeScreen.dart';
-import 'package:cibu_app/screens/ForgotPwChange.dart';
-import 'package:cibu_app/screens/ForgotPwNotif.dart';
+import 'package:cibu_app/screens/forgotpwchange.dart';
+import 'package:cibu_app/screens/forgotpwnotif.dart';
 import 'package:cibu_app/services/notifi_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -257,7 +257,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const ForgotPwNotif(),
+                              builder: (context) => const forgotpwnotif(),
                             ),
                           ),
                         },
@@ -275,7 +275,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const ForgotPwChange(),
+                              builder: (context) => const forgotpwchange(),
                             ),
                           ),
                         },

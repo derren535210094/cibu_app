@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:cibu_app/screens/HomeScreen.dart';
 
-class Kalkulator extends StatefulWidget {
-  const Kalkulator({super.key});
+class kalkulator extends StatefulWidget {
+  const kalkulator({super.key});
 
   @override
-  State<Kalkulator> createState() => _KalkulatorState();
+  State<kalkulator> createState() => _kalkulatorState();
 }
 
-class _KalkulatorState extends State<Kalkulator> {
+class _kalkulatorState extends State<kalkulator> {
   final textController = TextEditingController();
 
   final GlobalKey<FormState> validatorKey = GlobalKey<FormState>();

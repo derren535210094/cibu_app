@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
-class ForgotPwNotif extends StatefulWidget {
-  const ForgotPwNotif({super.key});
+class forgotpwnotif extends StatefulWidget {
+  const forgotpwnotif({super.key});
 
   @override
-  State<ForgotPwNotif> createState() => _ForgotPwNotifState();
+  State<forgotpwnotif> createState() => _forgotpwnotifState();
 }
 
-class _ForgotPwNotifState extends State<ForgotPwNotif> {
+class _forgotpwnotifState extends State<forgotpwnotif> {
   var value = '';
   String inputemail = '';
   int counter = 0;
