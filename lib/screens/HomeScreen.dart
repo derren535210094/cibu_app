@@ -1,8 +1,8 @@
 import 'package:cibu_app/model/user_model.dart';
 import 'package:cibu_app/provider/auth_provider.dart';
-import 'package:cibu_app/screens/kalkulator.dart';
-import 'package:cibu_app/screens/settings.dart';
-import 'package:cibu_app/screens/topup.dart';
+import 'package:cibu_app/screens/Kalkulator.dart';
+import 'package:cibu_app/screens/Settings.dart';
+import 'package:cibu_app/screens/TopUp.dart';
 import 'package:cibu_app/services/notifi_service.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:country_picker/country_picker.dart';
@@ -177,14 +177,14 @@ class _FirstPageState extends State<FirstPage> {
           // centerTitle: true,
           actions: [
             IconButton(
-              icon: const Icon(Icons.settings),
+              icon: const Icon(Icons.Settings),
               splashColor: Colors.transparent,
               highlightColor: Colors.transparent,
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const settings(),
+                    builder: (context) => const Settings(),
                   ),
                 );
               },
@@ -717,14 +717,14 @@ class _FirstPageState extends State<FirstPage> {
 
                                   /* onPressed: () {
                      Navigator.pushNamed(
-                  context, '/Topup'
+                  context, '/TopUp'
                   ); */
                                   onPressed: () async {
                                     final Map<String, dynamic>? result =
                                         await Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => const topup(),
+                                        builder: (context) => const TopUp(),
                                       ),
                                     );
                                     if (result != null) {
@@ -741,7 +741,7 @@ class _FirstPageState extends State<FirstPage> {
                                               DateTime.now()), // 24-hour format
                                           'amount': formatmoney,
                                           'phone': "anda sendiri",
-                                          'topup': inputNumber,
+                                          'TopUp': inputNumber,
                                           'transfer': "Top Up",
                                         });
                                       });
@@ -752,7 +752,7 @@ class _FirstPageState extends State<FirstPage> {
                                   /*  Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const topup(),
+                    builder: (context) => const TopUp(),
                     ),
                   );  */
                                   child: Column(
@@ -824,7 +824,7 @@ class _FirstPageState extends State<FirstPage> {
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) =>
-                                            const kalkulator(),
+                                            const Kalkulator(),
                                       ),
                                     );
                                   },
@@ -864,7 +864,7 @@ class _FirstPageState extends State<FirstPage> {
                                             ).createShader(bounds);
                                           },
                                           child: const Text(
-                                            'Split bill\nkalkulator',
+                                            'Split bill\nKalkulator',
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
                                                 color: Colors.white,

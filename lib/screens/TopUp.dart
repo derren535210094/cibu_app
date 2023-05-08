@@ -3,18 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:intl/intl.dart';
 
-class topup extends StatefulWidget {
-  const topup({super.key});
+class TopUp extends StatefulWidget {
+  const TopUp({super.key});
 
   @override
-  State<topup> createState() => _topupState();
+  State<TopUp> createState() => _TopUpState();
 }
 
-class _topupState extends State<topup> {
+class _TopUpState extends State<TopUp> {
   final textController = TextEditingController();
 
   final GlobalKey<FormState> validatorKey = GlobalKey<FormState>();
-  final TextEditingController topupvalue = TextEditingController();
+  final TextEditingController TopUpvalue = TextEditingController();
   var value = '';
   bool checks = false;
   int? inputNumber;
@@ -98,7 +98,7 @@ class _topupState extends State<topup> {
                             Container(
                               margin: const EdgeInsets.fromLTRB(20, 10, 70, 20),
                               child: TextFormField(
-                                controller: topupvalue,
+                                controller: TopUpvalue,
                                 style: const TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
@@ -209,7 +209,7 @@ class _topupState extends State<topup> {
                 );*/
 
                                 final inputNumber =
-                                    int.tryParse(topupvalue.text) ?? 0;
+                                    int.tryParse(TopUpvalue.text) ?? 0;
                                 // Navigator.pop(context, inputNumber);
 
                                 final format = NumberFormat("#,###", "en_US");
@@ -254,7 +254,7 @@ class _topupState extends State<topup> {
                                 );*/
 
                                 final int inputUSD =
-                                    int.tryParse(topupvalue.text) ?? 0;
+                                    int.tryParse(TopUpvalue.text) ?? 0;
                                 final int inputNumber = inputUSD * 15000;
                                 // Navigator.pop(context, inputNumber);
 

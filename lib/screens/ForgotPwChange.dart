@@ -6,14 +6,14 @@ import 'package:flutter_pw_validator/flutter_pw_validator.dart';
 import 'package:provider/provider.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
-class forgotpwchange extends StatefulWidget {
-  const forgotpwchange({super.key});
+class ForgotPwChange extends StatefulWidget {
+  const ForgotPwChange({super.key});
 
   @override
-  State<forgotpwchange> createState() => _forgotpwchangeState();
+  State<ForgotPwChange> createState() => _ForgotPwChangeState();
 }
 
-class _forgotpwchangeState extends State<forgotpwchange> {
+class _ForgotPwChangeState extends State<ForgotPwChange> {
   var value = '';
   String inputemail = '';
   int counter = 0;
